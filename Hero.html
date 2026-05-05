@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Velorah — Hero</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          background: 'hsl(var(--background))',
+          foreground: 'hsl(var(--foreground))',
+          'muted-foreground': 'hsl(var(--muted-foreground))',
+          primary: 'hsl(var(--primary))',
+          'primary-foreground': 'hsl(var(--primary-foreground))',
+          secondary: 'hsl(var(--secondary))',
+          muted: 'hsl(var(--muted))',
+          accent: 'hsl(var(--accent))',
+          border: 'hsl(var(--border))',
+          input: 'hsl(var(--input))',
+        },
+        maxWidth: {
+          '7xl': '80rem',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  :root {
+    --background: 201 100% 13%;
+    --foreground: 0 0% 100%;
+    --muted-foreground: 240 4% 66%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 10%;
+    --muted: 0 0% 10%;
+    --accent: 0 0% 10%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --font-display: 'Instrument Serif', serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+
+  /* Video placeholder — replace this element later with the real <video> */
+  .video-placeholder {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse at 30% 20%, hsla(201, 80%, 22%, 0.9) 0%, transparent 60%),
+      radial-gradient(ellipse at 70% 80%, hsla(201, 90%, 8%, 1) 0%, transparent 55%),
+      linear-gradient(180deg, hsl(201 100% 10%) 0%, hsl(201 100% 13%) 50%, hsl(201 100% 8%) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .video-placeholder::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.012) 0px,
+        rgba(255, 255, 255, 0.012) 2px,
+        transparent 2px,
+        transparent 14px
+      );
+    pointer-events: none;
+  }
+  .video-placeholder-label {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.28);
+    border: 1px dashed rgba(255, 255, 255, 0.18);
+    padding: 10px 18px;
+    border-radius: 999px;
+    z-index: 2;
+  }
+
+  /* Liquid glass effect */
+  .liquid-glass {
+    background: rgba(255, 255, 255, 0.01);
+    background-blend-mode: luminosity;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: none;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .liquid-glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.4px;
+    background: linear-gradient(180deg,
+      rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+      rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+      rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+  }
+  .liquid-glass:hover {
+    transform: scale(1.03);
+  }
+
+  /* Animations */
+  @keyframes fade-rise {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-rise        { animation: fade-rise 0.8s ease-out both; }
+  .animate-fade-rise-delay  { animation: fade-rise 0.8s ease-out 0.2s both; }
+  .animate-fade-rise-delay-2{ animation: fade-rise 0.8s ease-out 0.4s both; }
+  .animate-fade-rise-delay-3{ animation: fade-rise 0.8s ease-out 0.6s both; }
+
+  /* Stat cards — share the liquid-glass treatment but as a static card (no hover scale) */
+  .stat-card {
+    background: rgba(255, 255, 255, 0.01);
+    background-blend-mode: luminosity;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: none;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    border-radius: 22px;
+  }
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.4px;
+    background: linear-gradient(180deg,
+      rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+      rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+      rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* Display heading */
+  .display {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+  }
+</style>
+</head>
+<body>
+
+<main class="relative min-h-screen w-full overflow-hidden">
+
+  <!-- Background video -->
+  <video
+    class="absolute inset-0 w-full h-full object-cover z-0"
+    autoplay
+    loop
+    muted
+    playsinline
+    preload="auto"
+    aria-hidden="true"
+  >
+    <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260405_171521_25968ba2-b594-4b32-aab7-f6b69398a6fa.mp4" type="video/mp4" />
+  </video>
+
+  <!-- Navigation -->
+  <nav class="relative z-10 flex flex-row justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+    <a href="#" class="display text-3xl tracking-tight text-foreground select-none">
+      Velorah<sup class="text-xs">®</sup>
+    </a>
+
+    <ul class="hidden md:flex items-center gap-10 list-none m-0 p-0">
+      <li><a href="#" class="text-sm text-foreground transition-colors">Home</a></li>
+      <li><a href="#" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Studio</a></li>
+      <li><a href="#" class="text-sm text-muted-foreground hover:text-foreground transition-colors">About</a></li>
+      <li><a href="#" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Journal</a></li>
+      <li><a href="#" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Reach Us</a></li>
+    </ul>
+
+    <button class="liquid-glass rounded-full px-6 py-2.5 text-sm text-foreground">
+      Begin Journey
+    </button>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative z-10 flex flex-col items-center justify-center text-center px-6 pt-32 pb-24">
+
+    <h1 class="display animate-fade-rise text-5xl sm:text-7xl md:text-8xl leading-[0.95] tracking-[-2.46px] max-w-7xl font-normal text-foreground">
+      Where <em class="not-italic text-muted-foreground">dreams</em> rise <em class="not-italic text-muted-foreground">through the silence.</em>
+    </h1>
+
+    <p class="animate-fade-rise-delay text-muted-foreground text-base sm:text-lg max-w-2xl mt-8 leading-relaxed">
+      We're designing tools for deep thinkers, bold creators, and quiet rebels.
+      Amid the chaos, we build digital spaces for sharp focus and inspired work.
+    </p>
+
+    <button class="liquid-glass animate-fade-rise-delay-2 rounded-full px-14 py-5 text-base text-foreground mt-12">
+      Begin Journey
+    </button>
+
+    <!-- Stat cards -->
+    <div class="animate-fade-rise-delay-3 mt-20 flex flex-wrap items-stretch justify-center gap-5">
+
+      <!-- Card 1 -->
+      <div class="stat-card text-left p-6 w-[220px]">
+        <div class="flex items-center justify-start mb-8">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M3 12h18"></path>
+            <path d="M12 3a14 14 0 0 1 0 18"></path>
+            <path d="M12 3a14 14 0 0 0 0 18"></path>
+          </svg>
+        </div>
+        <div class="text-white text-3xl font-medium tracking-tight leading-none">2.8B+</div>
+        <div class="text-white/70 text-sm mt-2">Users across the globe</div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="stat-card text-left p-6 w-[220px]">
+        <div class="flex items-center justify-start mb-8">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3a9 9 0 1 0 9 9"></path>
+            <path d="M21 3l-1.5 4.5L15 6"></path>
+            <path d="M12 7v5l3 2"></path>
+          </svg>
+        </div>
+        <div class="text-white text-3xl font-medium tracking-tight leading-none">
+          34.5 <span class="font-normal">Min</span>
+        </div>
+        <div class="text-white/70 text-sm mt-2">Average video watch time</div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>
