@@ -23,8 +23,8 @@ function Background({ showVideo }) {
 
 function Nav({ route, setRoute }) {
   // Left: Home, About -Right: Work, Resume, Contact
-  const left  = [NAV[0], NAV[2]];
-  const right = [NAV[1], NAV[3], NAV[4]];
+  const left  = [NAV[0], NAV[1]];
+  const right = [NAV[2], NAV[3], NAV[4]];
 
   return (
     <nav className="relative z-20 grid grid-cols-3 items-center px-8 py-6 max-w-[1400px] mx-auto">

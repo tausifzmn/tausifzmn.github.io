@@ -6,8 +6,8 @@ const VIDEO_SRC =
 
 const NAV = [
   { id: "home",    label: "Home" },
-  { id: "work",    label: "Work" },
   { id: "about",   label: "About" },
+  { id: "work",    label: "Work" },
   { id: "resume",  label: "Resume" },
   { id: "contact", label: "Contact" },
 ];
