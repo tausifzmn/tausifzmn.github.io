@@ -24,7 +24,7 @@ function AboutPage() {
         <div className="liquid-glass rounded-[28px] p-10 md:p-14 text-left">
           <Row label="Currently">
             <p className="ink text-lg leading-relaxed">
-              I'm an <span className="display italic ink">AI Engineer II</span> at
+              I'm an <span className="display font-bold ink">AI Engineer II</span> at
               Dayforce, building AI systems that make everyday work a little smarter.
             </p>
           </Row>
