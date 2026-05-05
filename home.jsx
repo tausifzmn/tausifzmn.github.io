@@ -1,4 +1,4 @@
-/* Page: Home — fits to viewport, no scroll on first paint */
+/* Page: Home -fits to viewport, no scroll on first paint */
 
 function HomePage({ tweaks }) {
   return (

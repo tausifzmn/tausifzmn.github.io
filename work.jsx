@@ -19,7 +19,7 @@ function ProjectThumb({ kind, accent }) {
     strokeLinecap: "round",
     strokeLinejoin: "round",
   };
-  /* Per-project palettes — soft, washed, abstract blob colors */
+  /* Per-project palettes -soft, washed, abstract blob colors */
   const palettes = {
     tracker:   ["rgba(245, 200, 160, 0.85)", "rgba(210, 180, 220, 0.55)", "rgba(180, 200, 175, 0.55)"],
     ai:        ["rgba(195, 215, 230, 0.78)", "rgba(245, 215, 200, 0.65)", "rgba(220, 220, 230, 0.55)"],
@@ -149,7 +149,7 @@ function WorkPage() {
           <span className="paren">(06)</span>
         </h1>
         <p className="animate-fade-rise-d2 ink-soft max-w-xl mx-auto mt-6 text-sm leading-relaxed">
-          Personal builds and shipped systems — agentic platforms, distributed
+          Personal builds and shipped systems -agentic platforms, distributed
           servers, games, and dashboards that have to actually work.
         </p>
       </header>

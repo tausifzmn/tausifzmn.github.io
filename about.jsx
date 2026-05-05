@@ -35,7 +35,7 @@ function AboutPage() {
             <p className="ink-soft text-base leading-relaxed">
               I spent the early part of my career building a strong foundation in
               traditional software development in Texas. The more I built, the more I
-              found myself drawn to AI — not just for what it could do, but for how it
+              found myself drawn to AI - not just for what it could do, but for how it
               could change the way we approach problems. That curiosity led me to a
               Master's in Applied Computing, and into the work I'm doing today with
               LangChain, multi-agent systems, and automation.

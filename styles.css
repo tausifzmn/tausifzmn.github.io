@@ -1,4 +1,4 @@
-/* === Tausif Zaman — portfolio styles === */
+/* === Tausif Zaman -portfolio styles === */
 
 :root {
   --background: 201 100% 13%;
@@ -25,7 +25,7 @@
   --glass-rgb: 255, 255, 255;
 }
 
-/* per-page palettes — desaturated, faded, editorial */
+/* per-page palettes -desaturated, faded, editorial */
 [data-theme="navy"] {
   /* deep faded blue */
   --page-bg-1: 210 38% 22%;
@@ -49,7 +49,7 @@
   --glass-rgb: 50, 30, 10;
 }
 [data-theme="moss"] {
-  /* forest moss green — slightly deeper, more foresty */
+  /* forest moss green -slightly deeper, more foresty */
   --page-bg-1: 100 24% 24%;
   --page-bg-2: 95 26% 20%;
   --page-bg-3: 100 32% 12%;
@@ -60,7 +60,7 @@
   --glass-rgb: 230, 225, 200;
 }
 [data-theme="navy-sunset"] {
-  /* navy with a faint warm mustard wash — like a sunset reflected in water */
+  /* navy with a faint warm mustard wash -like a sunset reflected in water */
   --page-bg-1: 215 32% 24%;
   --page-bg-2: 212 30% 28%;
   --page-bg-3: 220 40% 16%;
@@ -104,7 +104,7 @@ body {
 .mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
 
 /* ============================================================ */
-/* Liquid glass — shared treatment                                */
+/* Liquid glass -shared treatment                                */
 /* ============================================================ */
 .liquid-glass {
   background: rgba(var(--glass-rgb), 0.04);
@@ -238,7 +238,7 @@ body {
   margin: 8px 8px 0;
   border-radius: 16px;
 }
-/* stripes overlay removed — was reading as a copyright-check pattern */
+/* stripes overlay removed -was reading as a copyright-check pattern */
 .project-thumb-stripes {
   display: none;
 }
@@ -366,7 +366,7 @@ body {
 [data-theme="rust"]    .video-tint { background: linear-gradient(180deg, rgba(30,10,5,0.45) 0%, rgba(30,10,5,0.60) 100%); }
 
 /* ============================================================ */
-/* Home — fit-to-viewport hero                                    */
+/* Home -fit-to-viewport hero                                    */
 /* ============================================================ */
 .home-fit {
   position: relative;

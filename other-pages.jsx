@@ -25,7 +25,7 @@ function ContactPage() {
           <span className="paren">(?)</span>
         </h1>
         <p className="animate-fade-rise-d2 ink-soft max-w-lg mx-auto mt-6 text-sm leading-relaxed">
-          Whether it's a project, a problem, or just a tangent worth following — my
+          Whether it's a project, a problem, or just a tangent worth following -my
           inbox is open.
         </p>
       </header>

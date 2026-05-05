@@ -22,7 +22,7 @@ function Background({ showVideo }) {
 }
 
 function Nav({ route, setRoute }) {
-  // Left: Home, About — Right: Work, Resume, Contact
+  // Left: Home, About -Right: Work, Resume, Contact
   const left  = [NAV[0], NAV[2]];
   const right = [NAV[1], NAV[3], NAV[4]];
 

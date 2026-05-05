@@ -29,7 +29,7 @@ const PROJECTS = [
     role: "Side project",
     tags: ["React", "Stats", "Visualization"],
     blurb:
-      "A personal stat tracker for Overwatch — pulls match data, charts trends across heroes and roles, and surfaces the patterns that actually move SR.",
+      "A personal stat tracker for Overwatch -pulls match data, charts trends across heroes and roles, and surfaces the patterns that actually move SR.",
     href: "https://github.com/tausifzmn/overwatch-tracker",
     accent: "16 90% 50%",
     thumbKind: "tracker",
@@ -41,7 +41,7 @@ const PROJECTS = [
     role: "AI experiment",
     tags: ["Python", "AI", "Generative"],
     blurb:
-      "An AI image-generation playground exploring prompt pipelines, model swaps, and reproducible runs — built to learn the seams of generative tooling.",
+      "An AI image-generation playground exploring prompt pipelines, model swaps, and reproducible runs -built to learn the seams of generative tooling.",
     href: "https://github.com/tausifzmn/AIIG",
     accent: "270 70% 55%",
     thumbKind: "ai",
@@ -65,7 +65,7 @@ const PROJECTS = [
     role: "Game project",
     tags: ["Game Dev", "C#", "Unity"],
     blurb:
-      "A laser-combat arcade shooter — physics, particles, and a satisfying gameplay loop. Built for the joy of making things that go pew.",
+      "A laser-combat arcade shooter -physics, particles, and a satisfying gameplay loop. Built for the joy of making things that go pew.",
     href: "https://github.com/tausifzmn/Lasers-Combat-Evolved",
     accent: "330 80% 55%",
     thumbKind: "lasers",
@@ -73,7 +73,7 @@ const PROJECTS = [
   {
     id: "multi-agent-platform",
     name: "Multi-Agent Automation Platform",
-    year: "2025 — Now",
+    year: "2025 -Now",
     role: "AI Engineer II · Dayforce",
     tags: ["LangGraph", "Playwright MCP", "ChromaDB", "Langfuse"],
     blurb:
@@ -85,7 +85,7 @@ const PROJECTS = [
   {
     id: "test-execution-dashboard",
     name: "Test Execution Dashboard",
-    year: "2025 — Now",
+    year: "2025 -Now",
     role: "AI Engineer II · Dayforce",
     tags: ["React", "TypeScript", "FastAPI", "SQL Server"],
     blurb:
@@ -111,11 +111,11 @@ const CONTACT = {
 
 const EXPERIENCE = [
   {
-    time: "Sep 2025 — Now",
+    time: "Sep 2025 -Now",
     place: "Dayforce · Toronto",
     title: "AI Software Engineer II",
     bullets: [
-      "Engineered multi-agent LangChain automation using Playwright MCP that translates natural-language test instructions into executable workflows — cut 1,600+ hour validation cycles by 22%.",
+      "Engineered multi-agent LangChain automation using Playwright MCP that translates natural-language test instructions into executable workflows -cut 1,600+ hour validation cycles by 22%.",
       "Built a NL→SQL query agent across a 5,000+ table database, reducing manual report generation from 10 hours to under 3 minutes for 1,000+ annual reports.",
       "Designed a modular backend with SQLModel base-class hierarchy and versioned Alembic migrations, enabling structured schema evolution without production regressions.",
       "Closed a FastAPI authorization IDOR flaw by enforcing JWT user identity, eliminating a production security vulnerability.",
@@ -123,7 +123,7 @@ const EXPERIENCE = [
     ],
   },
   {
-    time: "Oct 2022 — Mar 2023",
+    time: "Oct 2022 -Mar 2023",
     place: "ESB Technologies · Austin, TX",
     title: "Software Developer",
     bullets: [
@@ -133,7 +133,7 @@ const EXPERIENCE = [
     ],
   },
   {
-    time: "Dec 2021 — Aug 2022",
+    time: "Dec 2021 -Aug 2022",
     place: "Infosys Limited · Austin, TX",
     title: "Senior Systems Engineer",
     bullets: [
@@ -143,7 +143,7 @@ const EXPERIENCE = [
     ],
   },
   {
-    time: "Jan 2021 — Aug 2021",
+    time: "Jan 2021 -Aug 2021",
     place: "IJ Ventures · NYC",
     title: "Full-Stack Developer Intern",
     bullets: [
@@ -155,12 +155,12 @@ const EXPERIENCE = [
 
 const EDUCATION = [
   {
-    time: "Aug 2024 — Dec 2025",
+    time: "Aug 2024 -Dec 2025",
     place: "University of Windsor · Windsor, ON",
     title: "Master of Applied Computing",
   },
   {
-    time: "Aug 2016 — Aug 2020",
+    time: "Aug 2016 -Aug 2020",
     place: "University of Texas at Arlington",
     title: "B.S., Computer Science",
   },
