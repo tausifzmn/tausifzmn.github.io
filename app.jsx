@@ -4,7 +4,7 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "heroLine1": "AI software",
   "heroLine2": "engineer.",
   "heroParen": "tz",
-  "tagline": "Software developer based in Toronto, Canada -building AI-agentic systems that turn traditional workflows into something measurably smarter, with real-world impact.",
+  "tagline": "Software developer based in Toronto, Canada - building AI-agentic systems that turn traditional workflows into something measurably smarter, with real-world impact.",
   "glassBlur": 14
 }/*EDITMODE-END*/;
 

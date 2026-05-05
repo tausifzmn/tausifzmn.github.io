@@ -149,7 +149,7 @@ function WorkPage() {
           <span className="paren">(06)</span>
         </h1>
         <p className="animate-fade-rise-d2 ink-soft max-w-xl mx-auto mt-6 text-sm leading-relaxed">
-          Personal builds and shipped systems -agentic platforms, distributed
+          Personal builds and shipped systems - agentic platforms, distributed
           servers, games, and dashboards that have to actually work.
         </p>
       </header>
